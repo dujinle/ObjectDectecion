@@ -34,7 +34,7 @@ class PredictTSHandler(RequestHandler):
 				self.except_handle('the param text is empty');
 				return ;
 			rest = self.mager.predict_ts(idata);
-			self.write(self.gen_result(0,'enjoy success',rest));
+			self.write(self.gen_result(200,'enjoy success',rest));
 		except Exception as e:
 			logging.error(str(e));
 			raise e;
